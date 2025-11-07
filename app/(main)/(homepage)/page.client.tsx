@@ -86,12 +86,12 @@ export default function HomePageClient() {
 
   return (
     <div className="flex flex-col gap-y-4 w-full">
-      <h1 className="max-w-xs text-3xl font-semibold leading-10">
+      <h1 className="max-w-xs text-3xl font-semibold leading-10 pt-4">
         Fruit/ Vegetable List
       </h1>
-      <div className="grid grid-cols-3 gap-4 min-h-[834px]">
+      <div className="grid grid-cols-3 gap-4 h-[80vh]">
         {/* Div for list of fruits and veggies */}
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-4">
           {shoppingList.map((item) => (
             <ShoppingItemCard
               key={item.name}
@@ -104,7 +104,7 @@ export default function HomePageClient() {
         </div>
         {/* Div for list of fruits and veggies separated by a department */}
         {Object.entries(ShoppingItemTypeInfo).map(([key, value]) => (
-          <div className="border border-gray-300 shadow-sm w-full" key={key}>
+          <div className="border border-gray-300 shadow-sm" key={key}>
             <div className="bg-gray-100 p-4 text-center">
               <p className="font-semibold text-lg">{value.title}</p>
             </div>

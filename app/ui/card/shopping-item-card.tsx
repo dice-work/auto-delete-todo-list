@@ -11,7 +11,7 @@ const ShoppingItemCard = ({ item, onItemChange }: DefaultCardProps) => {
       onClick={() => onItemChange({ ...item })}
       type="button"
     >
-      <p className="text-lg font-semibold">{item.name}</p>
+      <p className="text-base font-semibold">{item.name}</p>
     </button>
   );
 };
